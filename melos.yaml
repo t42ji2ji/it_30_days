@@ -1,0 +1,4 @@
+name: it_30_days
+
+packages:
+  - apps/*
