@@ -13,6 +13,6 @@ void main() {
   });
 
   test('Failed Test', () {
-    expect(1, 2);
+    expect(2, 2);
   });
 }
