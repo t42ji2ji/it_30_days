@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Testing github action
-        run: ehco "Hello World Github Action"
+        run: echo "Hello World Github Action"
