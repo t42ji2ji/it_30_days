@@ -1,0 +1,19 @@
+flavors:
+  prod:
+    app:
+      name: 'App'
+    android:
+      applicationId: 'com.example.flutter_day_2_flavor'
+    ios:
+      bundleId: 'com.example.flutter_day_2_flavor'
+    macos:
+      bundleId: 'com.example.flutter_day_2_flavor'
+  dev:
+    app:
+      name: 'App DEV'
+    android:
+      applicationId: 'com.example.flutter_day_2_flavor.dev'
+    ios:
+      bundleId: 'com.example.flutter_day_2_flavor.dev'
+    macos:
+      bundleId: 'com.example.flutter_day_2_flavor.dev'

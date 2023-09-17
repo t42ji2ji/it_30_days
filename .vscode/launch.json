@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "it_30_days",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "flutter_day_2_flavor",
+      "request": "launch",
+      "cwd": "apps/flutter_day_2_flavor",
+      "program": "lib/main.dart",
+      "type": "dart"
+    }
+  ]
+}
