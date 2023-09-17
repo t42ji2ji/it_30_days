@@ -9,7 +9,7 @@ on:
 
 jobs:
   flutter_test:
-    name: Test (kg-wallet-core)
+    name: Flutter Test
     runs-on: ubuntu-latest
     defaults:
       run:
