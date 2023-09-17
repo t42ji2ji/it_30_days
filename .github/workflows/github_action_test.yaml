@@ -1,0 +1,14 @@
+name: 'Github Action Test'
+
+on:
+  push:
+    branches:
+      - main # Or whatever branch you want to run this action on
+
+jobs:
+  test_github_action:
+    name: Validate PR title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing github action
+        run: ehco "Hello World Github Action"
