@@ -1,0 +1,37 @@
+name: Build Flutter App
+
+on:
+  push:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+    defaults:
+      run:
+        working-directory: ./apps/flutter_day_2_flavor
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.10.5'
+      - name: ⚙️ Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '12.x'
+          cache: 'gradle'
+        id: java
+
+      - name: Build Android app
+        run: |
+          pushd app/
+          flutter build appbundle --debug --flavor dev -t lib/main_dev.dart
+          popd
+        shell: bash
