@@ -31,7 +31,5 @@ jobs:
 
       - name: Build Android app
         run: |
-          pushd app/
-          flutter build appbundle --debug --flavor dev -t lib/main_dev.dart
-          popd
+          flutter build appbundle --flavor dev -t lib/main_dev.dart
         shell: bash
