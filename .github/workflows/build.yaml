@@ -35,5 +35,6 @@ jobs:
 
       - name: Build Android app
         run: |
+          echo ${{ secrets.SERVICE_ACCOUNT_JSON }}
           flutter build appbundle --flavor ${{ matrix.flavor }} -t lib/main_${{ matrix.flavor }}.dart
         shell: bash
