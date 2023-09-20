@@ -10,6 +10,9 @@ concurrency:
 jobs:
   build-android:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./apps/flutter_day_2_flavor
     strategy:
       matrix:
         flavor: [dev]
@@ -32,5 +35,5 @@ jobs:
 
       - name: Build Android app
         run: |
-          flutter build appbundle --flavor ${{ matrix.flavor }} -t lib/main_dev.dart
+          flutter build appbundle --flavor ${{ matrix.flavor }} -t lib/main_${{ matrix.flavor }}.dart
         shell: bash
